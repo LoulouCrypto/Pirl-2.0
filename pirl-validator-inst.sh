@@ -112,7 +112,7 @@ fi
 function prepare_system_for_download() {
 echo -e "Prepare the system to install ${GREEN}$COIN_NAME${NC} Validator."
 apt-get update >/dev/null 2>&1
-apt-get upgrade >/dev/null 2>&1
+apt-get upgrade -y >/dev/null 2>&1
 echo -e "Installing required packages, it may take some time to finish.${NC}"
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" curl systemd figlet unzip make clang pkg-config libssl-dev build-essential ntp git >/dev/null 2>&1
 curl https://sh.rustup.rs -sSf | sh
