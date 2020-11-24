@@ -188,9 +188,9 @@ prepare_system_for_download
 figlet -f slant "Pirl 2.0"
 create_swap
 enable_firewall
-prepare_system_for_compile
 pirl_compile
 configure_systemd
+important_information
 
 
 # Script by LoulouCrypto
