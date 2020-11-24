@@ -187,9 +187,13 @@ checks
 prepare_system_for_download
 figlet -f slant "Pirl 2.0"
 create_swap
+sleep 2
 enable_firewall
+sleep 2
 pirl_compile
+sleep 2
 configure_systemd
+sleep 2
 important_information
 
 
