@@ -41,7 +41,7 @@ progressfilt () {
 
 function validator_name() {
   echo -e "Your are going to install a ${GREEN}Pirl 2.0 Validator${NC}. Please use crtl+c if you don't want to install it ."
-  sleep 5  
+  sleep 2
   echo
   echo -e "Enter your${GREEN} Pirl Validator${NC} name:"
   read -e VALNAME
