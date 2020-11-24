@@ -144,8 +144,6 @@ cd $INSTALLFOLDER
 cargo +nightly-2020-07-01 build --release
 sleep 2
 cp -rp target/release/pirl /usr/bin/
-fi
-
 clear
 }
 
