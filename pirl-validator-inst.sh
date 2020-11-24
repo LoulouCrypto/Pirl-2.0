@@ -141,6 +141,7 @@ clear
 figlet -f slant "Pirl 2.0"
 echo -e "Compiling ${GREEN}$COIN_NAME${NC} Validator."
 cd ~
+git clone $COIN_GIT
 cd $INSTALLFOLDER
 cargo +nightly-2020-07-01 build --release
 sleep 2
