@@ -156,7 +156,7 @@ function create_swap() {
   then
     echo -e "${GREEN}Server is running with less than 10G of RAM without SWAP, creating 20G swap file.${NC}"
     SWAPFILE=$(mktemp)
-    dd if=/dev/zero of=$SWAPFILE bs=1024 count=50M
+    dd if=/dev/zero of=$SWAPFILE bs=1024 count=20M
     chmod 600 $SWAPFILE
     mkswap $SWAPFILE
     swapon -a $SWAPFILE
@@ -168,13 +168,15 @@ function create_swap() {
 
 function important_information() {
 figlet -f slant "Pirl 2.0"
- echo
+
+ echo -e "Waiting 30 sec"
+ sleep 30
  echo -e "================================================================================"
  echo -e "$COIN_NAME Validator is up and running."
 
    echo -e "Start: ${RED}systemctl start $COIN_NAME.service${NC}"
    echo -e "Status: ${RED}systemctl status $COIN_NAME.service${NC}"
-   echo -e "Journal: ${RED}journalctl -fu $COIN_NAME"
+   echo -e "Journal: ${RED}journalctl -fu $COIN_NAME"${NC}
    echo -e "Your key for Submitting the setKeys Transaction :"
    curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
  echo -e "================================================================================"
