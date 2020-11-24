@@ -45,7 +45,6 @@ function validator_name() {
   echo
   echo -e "Enter your Pirl Validator name:"
   read -e VALNAME
-  fi
 clear
 }
 
