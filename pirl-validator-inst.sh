@@ -152,7 +152,7 @@ clear
 function create_swap() {
  echo -e "Checking if swap space is needed."
  PHYMEM=$(free -g|awk '/^Mem:/{print $2}')
- if [[ "$PHYMEM" -lt "10" ]]
+ if "$PHYMEM" -lt "10"
   then
     echo -e "${GREEN}Server is running with less than 10G of RAM without SWAP, creating 20G swap file.${NC}"
     SWAPFILE=$(mktemp)
