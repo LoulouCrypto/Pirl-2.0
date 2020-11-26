@@ -133,17 +133,17 @@ clear
 function pirl_compile() {
 figlet -f slant "Pirl 2.0"
 echo -e "Prepare compiling ${GREEN}$COIN_NAME${NC} Validator."
-rustup toolchain install nightly-2020-07-01
+rustup toolchain install nightly-2020-10-06
 rustup update nightly
 rustup update stable
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-07-01
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06-x86_64-unknown-linux-gnu
 clear
 figlet -f slant "Pirl 2.0"
 echo -e "Compiling ${GREEN}$COIN_NAME${NC} Validator."
 cd ~
 git clone $COIN_GIT
 cd $INSTALLFOLDER
-cargo +nightly-2020-07-01 build --release
+cargo +nightly-2020-10-06-x86_64-unknown-linux-gnu build --release
 sleep 2
 cp -rp target/release/pirl /usr/bin/
 clear
