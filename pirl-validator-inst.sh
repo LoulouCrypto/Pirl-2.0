@@ -9,7 +9,8 @@
 INSTALLFOLDER='pirl-2_0'
 COIN_PATH='/usr/bin/'
 #64 bit only
-COIN_GIT='https://github.com/pirl/pirl-2_0'
+#COIN_GIT='https://github.com/pirl/pirl-2_0'
+COIN_GIT='https://github.com/starkleytech/pirl-2_0'
 COIN_PORT=30333
 COIN_NAME='pirl'
 
