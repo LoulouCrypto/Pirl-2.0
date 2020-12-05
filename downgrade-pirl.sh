@@ -22,8 +22,7 @@ cargo +nightly-2020-10-06-x86_64-unknown-linux-gnu build --release
 sleep 2
 rm -rf .local/share/pirl/
 sleep 2
-cp -rp target/release/pirl /usr/bin/pirl
-
+cp -rpf target/release/pirl /usr/bin/pirl
 clear
 echo -e "Waiting 30 sec"
 sleep 30
