@@ -14,6 +14,12 @@ Downgrade to 0.8.25
 
 bash -i <(curl -s https://raw.githubusercontent.com/LoulouCrypto/Pirl-2.0/main/downgrade-pirl.sh)
 
+Install 0.8.25
+
+Run it as root 
+
+bash -i <(curl -s https://raw.githubusercontent.com/LoulouCrypto/Pirl-2.0/main/pirl-validator-inst-old.sh)
+
 https://www.louloucrypto.fr
 If you want to support me
 My pirl2.0 wallet : 
